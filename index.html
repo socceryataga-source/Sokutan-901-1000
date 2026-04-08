@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <script>
-const password = prompt("クラスコードを入力してください");
-if(password !== "hokuto2026"){
-  document.body.innerHTML = "<h2 style=\"padding:2rem;text-align:center;font-family:sans-serif\">アクセスできません</h2>";
+window.__authOK = prompt("クラスコードを入力してください") === "hokuto2026";
+
+if (!window.__authOK) {
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.innerHTML = "<h2 style=\"padding:2rem;text-align:center;font-family:sans-serif\">アクセスできません</h2>";
+  });
 }
 </script>
+
 
 <title>頻出語句クイズ（No.901-1000）</title>
 <link rel="stylesheet" href="styles.css">

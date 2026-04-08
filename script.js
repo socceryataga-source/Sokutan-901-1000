@@ -1,3 +1,6 @@
+if (!window.__authOK) {
+  // 認証失敗時は何も実行しない
+} else {
 
 let quizData = [];
 let currentIndex = 0;
@@ -181,4 +184,6 @@ function shuffle(arr){
     const j = Math.floor(Math.random() * (i + 1));
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
+}
+
 }
